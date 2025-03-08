@@ -31,10 +31,10 @@ const Navbar = () => {
       <ul className='nav-menu'>
         <li onClick={() => setMenu("shop")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/'>Shop</Link>{menu === "shop" ? <hr /> : <></>}</li>
         <li onClick={() => setMenu("mens")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/mens'>Clutches</Link>{menu === "mens" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("womens")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/womens'>SideBag</Link>{menu === "womens" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("kids")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/kids'>Purses</Link>{menu === "kids" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("backpack")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/backpack'>BackPack</Link>{menu === "backpack" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("travelbag")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/travelbag'>TravelBag</Link>{menu === "travelbag" ? <hr /> : <></>}</li>
+        <li onClick={() => setMenu("womens")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/womens'>Purses</Link>{menu === "womens" ? <hr /> : <></>}</li>
+        <li onClick={() => setMenu("kids")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/kids'>BackPack</Link>{menu === "kids" ? <hr /> : <></>}</li>
+        <li onClick={() => setMenu("backpack")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/backpack'>TravelBag</Link>{menu === "backpack" ? <hr /> : <></>}</li>
+        {/* <li onClick={() => setMenu("travelbag")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/travelbag'>TravelBag</Link>{menu === "travelbag" ? <hr /> : <></>}</li> */}
       </ul>
 
       {/* Search Icon (Click to toggle search bar) */}

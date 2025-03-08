@@ -1,33 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import './Hero.css'
 
-const Hero = () => {
+import slide1 from "../Components/Assets/slide1.png";
+import slide2 from "../Components/Assets/slide2.png";
+import slide3 from "../Components/Assets/slide3.png";
+import slide4 from "../Components/Assets/slide4.png";
+
+const images = [slide1, slide2, slide3, slide4];
+
+const HeroSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-play effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <div className='hero'>
-      <div className="hero-left">
-        <h2>New Arrivals Only</h2>
-        <div>
-          <div className="hero-hand-icon">
-            <div className="desc">
-            <p>new</p>
-            <img src='/images/hand_icon.png' alt=''/>
-            </div>
-            <p>collections</p>
-            <p>for everyone</p>
-          </div>
-          <div className="hero-latest-btn">
-            <div>
-              Latest Collections
-            </div>
-            <img src="/images/arrow.png" alt="" />
-          </div>
+    <div className="slider-container">
+      {/* Slide Image */}
+      <img src={images[currentIndex]} alt="slide" className="slide-image" />
+
+      {/* Navigation Dots (Below the image) */}
+      <div className="dots-wrapper">
+        <div className="dots-container">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentIndex ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+            ></span>
+          ))}
         </div>
       </div>
-      <div className="hero-right">
-      <img src="/images/heroimg.png" alt="Hero" />
-      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default HeroSlider;
