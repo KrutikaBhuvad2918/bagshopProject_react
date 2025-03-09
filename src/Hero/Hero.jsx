@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './Hero.css'
 
-import slide1 from "../Components/Assets/slide1.png";
-import slide2 from "../Components/Assets/slide2.png";
-import slide3 from "../Components/Assets/slide3.png";
-import slide4 from "../Components/Assets/slide4.png";
+import slide1 from "../Components/Assets/slide-img1.png";
+import slide2 from "../Components/Assets/slide-img2.png";
+import slide3 from "../Components/Assets/slide-img3.jpg";
+import slide4 from "../Components/Assets/slide-img4.jpg";
 
 const images = [slide1, slide2, slide3, slide4];
 
