@@ -9,10 +9,12 @@
 .productdisplay-img-list{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* justify-content: center; */
+    gap: 25px;
 }
 .productdisplay-img-list img{
-    height: 163px;
+    height: 100px;
+    width: 95px;
 }
 .productdisplay-main-img{
     width: 25rem;
