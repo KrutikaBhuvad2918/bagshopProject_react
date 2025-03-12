@@ -7,8 +7,8 @@ import { ShopContext } from '../../Context/ShopContext';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-  const [showSearch, setShowSearch] = useState(false); 
-  const { getTotalCartItems } = useContext(ShopContext);
+  const [showSearch, setShowSearch] = useState(false);
+  const { getTotalCartItems, searchQuery, setSearchQuery } = useContext(ShopContext);
 
   return (
     <div className='navbar'>
@@ -17,26 +17,28 @@ const Navbar = () => {
         <p>BAGSHOP</p>
       </div>
 
-      {/* Search bar container (will overlap menu when visible) */}
+      {/* Search bar */}
       {showSearch && (
         <div className='overlay-search-bar'>
           <input 
             type="text" 
             className='search-bar' 
             placeholder="Search bags..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
       )}
 
       <ul className='nav-menu'>
-        <li onClick={() => setMenu("shop")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/'>Shop</Link>{menu === "shop" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("clutches")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/clutches'>Clutches</Link>{menu === "clutches" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("purses")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/purses'>Purses</Link>{menu === "purses" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("backpacks")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/backpacks'>BackPack</Link>{menu === "backpacks" ? <hr /> : <></>}</li>
+        <li onClick={() => setMenu("shop")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/'>Shop</Link>{menu === "shop" ? <hr /> : null}</li>
+        <li onClick={() => setMenu("clutches")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/clutches'>Clutches</Link>{menu === "clutches" ? <hr /> : null}</li>
+        <li onClick={() => setMenu("purses")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/purses'>Purses</Link>{menu === "purses" ? <hr /> : null}</li>
+        <li onClick={() => setMenu("backpacks")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/backpacks'>BackPack</Link>{menu === "backpacks" ? <hr /> : null}</li>
         <li onClick={() => setMenu("travelbags")}><Link style={{ textDecoration: 'none', color: 'black' }} to='/travelbags'>TravelBag</Link>{menu === "travelbags" ? <hr /> : null}</li>
       </ul>
 
-      {/* Search Icon (Click to toggle search bar) */}
+      {/* Search Icon */}
       <div className="nav-search-container">
         <img 
           src={SearchIcon} 

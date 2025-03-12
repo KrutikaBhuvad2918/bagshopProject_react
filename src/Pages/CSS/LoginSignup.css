@@ -1,61 +1,267 @@
-.loginsignup{
-    width: 100%;
-    height: 100vh;
-    background: #fce3fe;
-    padding-top: 75px;
-}
-.liginsignup-container{
-    width: 500px;
-    height: 545px;
-    background: white;
-    margin: auto;
-    padding: 10px 60px;
-}
-.liginsignup-container h1{
-    margin: 20px 0px;
-}
-.loginsignup-fields{
+.login-container {
     display: flex;
     flex-direction: column;
-    gap: 29px;
-    margin-top: 30px;
-}
-.loginsignup-fields input{
-    height: 50px;
-    width: 95%;
-    padding-left: 20px;
-    border: 1px solid #c9c9c9;
-    outline: none;
-    color: #5c5c5c;
-    font-size: 18px;
-}
-.liginsignup-container button{
-    width: 100%;
-    height: 50px;
-    color: white;
-    background: #ff4141;
-    margin-top: 30px;
-    border: none;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-}
-.loginsignup-login{
-    margin-top: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
-}
-.loginsignup-login span{
-    color: #ff4141;
-    font-weight: 600;
-}
-.loginsignup-agree{
-    display: flex;
     align-items: center;
-    margin-top: 25px;
-    gap: 20px;
-    color: #5c5c5c;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+  }
+  
+  .home-link {
+    color: gray;
+    text-decoration: none;
+  }
+  
+  .separator {
+    color: lightgray;
+  }
+  
+  .account-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 50px;
+    padding-right: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+  }
+  
+  .login-title {
     font-size: 18px;
-    font-weight: 500;
-}
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .login-subtitle {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .password-group {
+    position: relative;
+  }
+  form{
+    position: relative;
+  }
+  .forgot-password {
+    position: absolute;
+    right: 2px;
+    top: 65%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+  }
+  
+  .login-button {
+    width: 108%;
+    background-color: black;
+    color: white;
+    padding: 10px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #333;
+  }
+  
+  .signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .signup-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .toggle-password {
+    position: absolute;
+    right: -8px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: gray;
+  }
+  .input-group {
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 2rem;
+  }
+  
+  .floating-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: gray;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .input-field:focus + .floating-label,
+  .filled {
+    top: -10px;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .bold-text {
+    font-weight: bold;
+  }
+
+  .login-box {
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1s ease-in-out;
+    position: relative;
+    opacity: 1;
+  }
+  
+  /* Animation when Forgot Password opens */
+  .move-up {
+    transform: translateY(-50px);
+    opacity: 1;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  /* Animation when Login appears back */
+  .move-down {
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  /* Keyframes for extra smooth transition */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .forgot-password {
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .forgot-password:hover {
+    color: black;
+  }
+  
+  .signup-text a {
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+  }
+  
+  .signup-text a:hover {
+    color: black;
+  }
+  
+
+  /* .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .floating-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: gray;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  } */
+  
+  /* .input-field:focus + .floating-label,
+  .filled {
+    top: 5px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .bold-text {
+    font-weight: bold;
+  }
+  
+ 
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+  } */

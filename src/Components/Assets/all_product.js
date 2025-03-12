@@ -43,7 +43,7 @@ import p1_product_i3 from '../Assets/p1_product_i3.png'
 let all_product = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Collar Peplum Hem Blouse",
     category: "clutch",
     image: p1_img,
     images: [p1_img, p1_product_i1, p1_product_i2, p1_product_i3],
@@ -52,7 +52,7 @@ let all_product = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Blouse",
     category: "clutch",
     image: p2_img,
     images: [p2_img, p1_product_i1, p1_product_i2, p1_product_i3],
