@@ -89,3 +89,23 @@
 .productdisplay-right-category span{
     font-weight: 600;
 }
+.wishlist-button {
+    background: none;
+    border: 1px solid #ff4d6d;
+    color: #ff4d6d;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 20px;
+}
+
+.wishlist-button:hover {
+    background: #ff4d6d;
+    color: white;
+}
+
+.wishlisted {
+    background: #ff4d6d;
+    color: white;
+}

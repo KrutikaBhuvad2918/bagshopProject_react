@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import Cartlogo from '../Assets/cartlogo.png';
 import SearchIcon from '../Assets/search.jpg';
+import HeartIcon from '../Assets/heart-icon.jpg'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 
@@ -50,6 +51,7 @@ const Navbar = () => {
 
       <div className="nav-login-cart">
         <Link to='/login'><button>Login</button></Link>
+        <Link to="/wishlist"><img className='cart' src={HeartIcon}/></Link>
         <Link to='/cart'><img className='cart' src={Cartlogo} alt='' /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>

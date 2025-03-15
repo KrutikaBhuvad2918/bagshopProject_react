@@ -11,12 +11,14 @@ import clutch_banner from './Components/Assets/clutch_banner.png'
 import handbag_banner from './Components/Assets/Handbag_banner.png'
 import kid_banner from './Components/Assets/banner_kids.png'
 import travelbag_banner from './Components/Assets/clutch_banner.png'; 
+import Wishlist from './Pages/WishList';
+import PlaceOrder from './Pages/PlaceOrder';
 
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      
       <Navbar/>
       <Routes>
         <Route path='/' element={<Shop/>}/>
@@ -25,15 +27,15 @@ function App() {
         <Route path='/backpacks' element={<ShopCategory banner={kid_banner} category="backpack"/>}/>
         <Route path='/travelbags' element={<ShopCategory banner={travelbag_banner} category="travelbag" />} />
         <Route path='/product' element={<Product/>}>
-          <Route path=':productId' element={<Product/>}/>
+        <Route path=':productId' element={<Product/>}/>
         </Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
-
-
+        <Route path='/wishlist' element={<Wishlist/>} />
+        <Route path="/place-order" element={<PlaceOrder/>} />
       </Routes>
       <Footer/>
-      </BrowserRouter>
+      
      
     </div>
   );
