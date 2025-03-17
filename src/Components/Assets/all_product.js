@@ -242,7 +242,7 @@ import p48_product_i3 from '../Assets/TravelBags/pic12_i3.png'
 let all_product = [
   {
     id: 1,
-    name: "Collar Peplum Hem Blouse",
+    name: "Midnight Elegance Clutch",
     category: "clutch",
     image: p1_img,
     images: [p1_img, p1_product_i1, p1_product_i2, p1_product_i3],
@@ -251,7 +251,7 @@ let all_product = [
   },
   {
     id: 2,
-    name: "Blouse",
+    name: "Emerald Luxe Clutch",
     category: "clutch",
     image: p2_img,
     images: [p2_img, p2_product_i1, p2_product_i2, p2_product_i3],
@@ -260,7 +260,7 @@ let all_product = [
   },
   {
     id: 3,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Pink Glam Chain Clutch",
     category: "clutch",
     image: p3_img,
     images: [p3_img, p3_product_i1, p3_product_i2, p3_product_i3],
@@ -269,7 +269,7 @@ let all_product = [
   },
   {
     id: 4,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Silver Chic Clutch",
     category: "clutch",
     image: p4_img,
     images: [p4_img, p4_product_i1, p4_product_i2, p4_product_i3],

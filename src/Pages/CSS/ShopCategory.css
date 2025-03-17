@@ -9,11 +9,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.shopcategory-sort{
+/* .shopcategory-sort{
     padding: 10px 20px;
     border-radius: 40px;
     border: 1px solid #888;
-}
+} */
 .shopcategory-indexSort p span{
     font-weight: 600;  
 }
@@ -36,4 +36,25 @@
     color: #787878;
     font-size: 18px;
     font-weight: 500;
+}
+/* .shopcategory-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+.shopcategory-sort select {
+    padding: 0.8rem 1rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.shopcategory-sort select:focus {
+    outline: none;
+    border:2px solid black;
+    border-radius: 5rem;
 }
