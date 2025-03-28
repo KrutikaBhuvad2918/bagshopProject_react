@@ -12,7 +12,7 @@
   
   .footer-section {
     flex: 1;
-    min-width: 200px;
+    /* min-width: 200px; */
     margin-bottom: 20px;
   }
   
@@ -55,6 +55,7 @@
     margin-bottom: 0.5rem;
     background-color: black;
   }
+  
   .footer-section-newsletter p{
     width: 20rem;
     color: grey;
@@ -88,7 +89,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     border-top: 1px solid gray;
     padding-top: 20px;
   }
@@ -107,3 +108,34 @@
   .payment-img {
     display: flex;
   }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-map {
+    width: 30%;
+    min-width: 250px;
+    margin-right: 5.5rem;
+}
+.footer-map h3{
+  margin-bottom: 12px;
+}
+.footer-map p{
+  font-size: 14px;
+  padding: 4px;
+}
+.footer-map iframe {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* .footer-section,
+.footer-section-newsletter {
+    width: 25%;
+    min-width: 250px;
+} */

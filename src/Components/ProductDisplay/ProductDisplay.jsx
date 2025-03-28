@@ -55,7 +55,7 @@ const ProductDisplay = (props) => {
                 </div>    
 
                 <div className="productdisplay-right-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum optio hic, iste ut ad eos quo laborum eius exercitationem deleniti laboriosam distinctio repellendus accusamus voluptatibus id provident sunt, reiciendis recusandae!
+                    {product.desc}
                 </div>
 
                 <div className="product-buttons">
