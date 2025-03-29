@@ -5,6 +5,7 @@ import SearchIcon from '../Assets/search.jpg';
 import HeartIcon from '../Assets/heart-icon.jpg'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
+import { handleLogout } from "../FirebaseAuth/profile.js";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -50,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div className="nav-login-cart">
-        <Link to='/login'><button>Login</button></Link>
+        <Link to='/login' onClick={handleLogout}><button>Logout</button></Link>
         <Link to="/wishlist"><img className='cart' src={HeartIcon}/></Link>
         <Link to='/cart'><img className='cart' src={Cartlogo} alt='' /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
